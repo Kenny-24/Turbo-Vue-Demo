@@ -1,2 +1,5 @@
 # Vue-Demo
-vue project
+monorepo
+pnpm
+Vue3
+
