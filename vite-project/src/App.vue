@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
+import { Accumulation, Multiplication } from '@k/project-utils'
+import useBoolean from '@k/project-hook'
+const { bool, setBool, setTrue, setFalse, toggle } = useBoolean(false)
+
+
 </script>
 
 <template>
@@ -11,6 +16,15 @@ import HelloWorld from './components/HelloWorld.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
+  <div style="margin: 10px 0">
+      <d-tag type="warning">
+        {{ bool }}
+      </d-tag>
+  </div>
+  <d-button type="tertiary" @click="setFalse"> {{ bool }} </d-button>
+  <d-button type="primary" @click="setTrue"> {{ bool }} </d-button>
+  <d-button type="info" @click="toggle"> Toogle </d-button>
+
   <HelloWorld msg="Vite + Vue" />
 </template>
 

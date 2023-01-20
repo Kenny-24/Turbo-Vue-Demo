@@ -1,5 +1,3 @@
-# 表示 packages/* 这个目录下面所有的文件为 workspace 的内容
 packages:
-  - play # 存放组件测试的代码
-  - docs # 存放组件文档
-  - packages/* # packages 目录下都是组件包
+  - "apps/*"
+  - "packages/*"
